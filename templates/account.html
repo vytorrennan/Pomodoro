@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+{% block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
+<title>Account</title>
+{% endblock %}
+
+
+{% block body %}
+
+<div id="login" class="account">
+    <h2>Login</h2>
+    <form action="">
+        <label for="usernameLogin">Username</label>
+        <input type="text" name="usernameLogin" id="usernameLogin">
+        <label for="passwordLogin">Password</label>
+        <input type="password" name="passwordLogin" id="passwordLogin">
+        <button type="submit">Login</button>
+    </form>
+    <a href="#">Or Sign Up</a>
+</div>
+
+<div id="Register" class="account">
+    <h2>Register</h2>
+    <form action="">
+        <label for="usernameRegister">Username</label>
+        <input type="text" name="usernameRegister" id="usernameRegister">
+        <label for="passwordRegister">Password</label>
+        <input type="password" name="passwordRegister" id="passwordRegister">
+        <label for="passwordRegisterConfirm">Confirm Password</label>
+        <input type="password" name="passwordRegisterConfirm" id="passwordRegisterConfirm">
+        <button type="submit">Register</button>
+    </form>
+    <a href="#">Or Log In</a>
+</div>
+
+<script src="{{ url_for('static', filename='js/account.js') }}"></script>
+
+{% endblock %}
