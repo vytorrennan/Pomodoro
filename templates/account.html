@@ -10,30 +10,30 @@
 
 <div id="login" class="account">
     <h2>Login</h2>
-    <form action="">
-        <label for="usernameLogin">Username</label>
-        <input type="text" name="usernameLogin" id="usernameLogin">
+    <form action="/account" method="POST">
+        <label for="emailLogin">Email</label>
+        <input type="text" name="emailLogin" id="emailLogin">
         <label for="passwordLogin">Password</label>
         <input type="password" name="passwordLogin" id="passwordLogin">
-        <button type="submit">Login</button>
+        <button type="submit" name="btnLogin" value="Login">Login</button>
     </form>
-    <a href="#">Or Sign Up</a>
+    <a href="#" >Or Sign Up</a>
 </div>
 
-<div id="Register" class="account">
+<div id="register" class="account">
     <h2>Register</h2>
-    <form action="">
-        <label for="usernameRegister">Username</label>
-        <input type="text" name="usernameRegister" id="usernameRegister">
+    <form action="/account" method="POST">
+        <label for="emailRegister">Email</label>
+        <input type="text" name="emailRegister" id="emailRegister">
         <label for="passwordRegister">Password</label>
         <input type="password" name="passwordRegister" id="passwordRegister">
         <label for="passwordRegisterConfirm">Confirm Password</label>
         <input type="password" name="passwordRegisterConfirm" id="passwordRegisterConfirm">
-        <button type="submit">Register</button>
+        <button type="submit" name="btnRegister" value="Register">Register</button>
     </form>
     <a href="#">Or Log In</a>
 </div>
 
-<script src="{{ url_for('static', filename='js/account.js') }}"></script>
+<script src="{{ url_for('static', filename='js/account.js') }}" defer></script>
 
 {% endblock %}
